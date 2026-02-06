@@ -70,7 +70,7 @@ Store submissions using local storage or database
 
 ## 👤 Author
 
-Kiran Vishwakarma
+**Kiran Vishwakarma**
 
 📧 Email: kv878432@gmail.com
 
