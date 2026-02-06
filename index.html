@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="container" id="registrationForm">
+        <h1 id="title">Registration Form</h1>
+        <p>Fill out the form carefully for registration</p>
+        <div class="first">
+            <label >Student Name</label>
+            <div class="name-row">
+                
+                <input type="text"  id="firstName" placeholder="First Name">
+                <input type="text"  id="lastName"  placeholder="Second Name">
+            </div>
+        </div>
+        <div class="second">
+            <div class="gender">
+                <label>Gender</label>
+                <select id="gender">
+                    <option value="">Please Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="studentEmail">
+                <label>Student E-mail</label>
+                <input type="text" id="email" placeholder="ex:myname@example.com">
+            </div>
+        </div>
+        <div class="third">
+            <div class="studentId">
+                <label>Student Id</label>
+                <input type="text" id="studentId">
+            </div>
+            <div>
+                <div class="listClass">
+                    <label>List of Class</label>
+                    <select id="classList">
+                        <option value="">Please Select</option>
+                        <option>Class 10</option>
+                        <option>Class 11</option>
+                        <option>Class 12</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+    <script src="script.js"></script>
+</body>
+
+</html>

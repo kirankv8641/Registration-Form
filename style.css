@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: rgb(227, 153, 16);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 50px;
+    background: rgb(229, 222, 222);
+    
+}
+
+#title {
+    color: rgb(74, 71, 71);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+
+}
+label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.first,.second,.third {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+.first > label {
+  flex-basis: 100%;
+}
+.first label {
+  min-width: 120px;   
+}
+.first{
+  margin-bottom: 18px;   /* try 16–20px */
+}
+
+
+.first,
+.second > div,
+.third > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-row {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+.name-row input {
+  flex: 1;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+}
+
+
+
+button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 40px;
+  background: rgb(80, 185, 80);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
