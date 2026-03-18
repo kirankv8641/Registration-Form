@@ -1,5 +1,6 @@
 const form = document.getElementById("registrationForm");
-form.addEventListener("submit", function (e) {
+
+form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const firstName = document.getElementById("firstName").value.trim();
@@ -28,15 +29,35 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    console.log("Student Details:");
-    console.log("First Name:", firstName);
-    console.log("Last Name:", lastName);
-    console.log("Gender:", gender);
-    console.log("Email:", email);
-    console.log("Student ID:", studentId);
-    console.log("Class:", classList);
 
-    alert("Registration Successful");
-    form.reset();
+//SEND DATA TO BACKEND
+    const studentData={
+        firstName,
+        lastName,
+        email,
+        studentId,
+        gender,
+        classList
+    };
 
+    try{
+        const response=await fetch('http://localhost:3000/students', {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(studentData)
+        });
+
+        const result=await response.json();
+
+        alert("Registration Successful");
+        console.log(result);
+
+        form.reset();
+
+    }catch(error){
+        console.error(error);
+        alert("Error submitting form  X ");
+    }
 });
